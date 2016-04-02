@@ -9,15 +9,15 @@ using namespace std;
 
 typedef struct TESTNODE
 {
-	wchar_t* key;
+	char* key;
 	int value;
 } TestNode;
 
 int main()
 {
-	TestNode x = { x.key = L"AA", x.value = 115 };
-	TestNode y = { y.key = L"BB", y.value = 95 };
-	TestNode z = { z.key = L"CC", z.value = 125 };
+	TestNode x = { x.key = "AA", x.value = 115 };
+	TestNode y = { y.key = "BB", y.value = 95 };
+	TestNode z = { z.key = "CC", z.value = 125 };
 	vector<TestNode> vecNodes = { x, y, z };
 	vector<int> vecInts;
 	for (int i = 0; i < 1000; ++i)
@@ -33,7 +33,7 @@ int main()
 	double timeSpan = double(end - start) / CLOCKS_PER_SEC;
 	for (vector<TestNode>::const_iterator cItr = vecNodes.begin(); cItr != vecNodes.end(); ++cItr)
 	{
-		cout << (char*)(cItr->key) << ", " << cItr->value << endl;
+		cout << cItr->key << ", " << cItr->value << endl;
 	}
 	cout << sum << endl;
 	cout << timeSpan << "s" << endl;
