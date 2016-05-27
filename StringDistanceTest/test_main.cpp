@@ -152,7 +152,7 @@ TEST(compute_similarity, compute)
 int main(int argc, char* argv[])
 {
 	testing::InitGoogleTest(&argc, argv);
-	int val = RUN_ALL_TESTS();
+	auto val = RUN_ALL_TESTS();
 	system("pause");
 	return val;
 }
