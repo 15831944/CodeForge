@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FolderBrowserDlgDemo", "FolderBrowserDlgDemo\FolderBrowserDlgDemo.vcxproj", "{7CD35104-9CEF-458B-A5B0-C1F5C040A5AF}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringDistanceSharpDemo", "StringDistanceSharpDemo\StringDistanceSharpDemo.csproj", "{EE0611DF-A947-4D61-9787-4763D15BEC07}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StringDistanceTest", "StringDistanceTest\StringDistanceTest.vcxproj", "{D65D40C2-E88A-4556-9D49-9AC5564EB8C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfTableExtractDemo", "PdfTableExtractDemo\PdfTableExtractDemo.csproj", "{41FFD813-3968-4DD8-8E1B-ED564461B25F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -103,6 +105,22 @@ Global
 		{D65D40C2-E88A-4556-9D49-9AC5564EB8C7}.Release|x64.Build.0 = Release|x64
 		{D65D40C2-E88A-4556-9D49-9AC5564EB8C7}.Release|x86.ActiveCfg = Release|Win32
 		{D65D40C2-E88A-4556-9D49-9AC5564EB8C7}.Release|x86.Build.0 = Release|Win32
+		{41FFD813-3968-4DD8-8E1B-ED564461B25F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41FFD813-3968-4DD8-8E1B-ED564461B25F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41FFD813-3968-4DD8-8E1B-ED564461B25F}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{41FFD813-3968-4DD8-8E1B-ED564461B25F}.Debug|ARM.Build.0 = Debug|Any CPU
+		{41FFD813-3968-4DD8-8E1B-ED564461B25F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{41FFD813-3968-4DD8-8E1B-ED564461B25F}.Debug|x64.Build.0 = Debug|Any CPU
+		{41FFD813-3968-4DD8-8E1B-ED564461B25F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{41FFD813-3968-4DD8-8E1B-ED564461B25F}.Debug|x86.Build.0 = Debug|Any CPU
+		{41FFD813-3968-4DD8-8E1B-ED564461B25F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41FFD813-3968-4DD8-8E1B-ED564461B25F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41FFD813-3968-4DD8-8E1B-ED564461B25F}.Release|ARM.ActiveCfg = Release|Any CPU
+		{41FFD813-3968-4DD8-8E1B-ED564461B25F}.Release|ARM.Build.0 = Release|Any CPU
+		{41FFD813-3968-4DD8-8E1B-ED564461B25F}.Release|x64.ActiveCfg = Release|Any CPU
+		{41FFD813-3968-4DD8-8E1B-ED564461B25F}.Release|x64.Build.0 = Release|Any CPU
+		{41FFD813-3968-4DD8-8E1B-ED564461B25F}.Release|x86.ActiveCfg = Release|Any CPU
+		{41FFD813-3968-4DD8-8E1B-ED564461B25F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
