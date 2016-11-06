@@ -1,8 +1,13 @@
 #include <windows.h>
 #include <stdio.h>
 
-typedef int(__cdecl *ZIPPROC)(wchar_t*, LPCWSTR);
-typedef int(__cdecl *UNZIPPROC)(wchar_t*, LPCWSTR);
+// Both __stdcall and __cdecl are OK for BqqZip.dll, and __cdecl is the default one in C++.
+//typedef int(__cdecl *ZIPPROC)(wchar_t*, LPCWSTR);
+//typedef int(__cdecl *UNZIPPROC)(wchar_t*, LPCWSTR);
+typedef int(__stdcall *ZIPPROC)(LPCWSTR, LPCWSTR);
+typedef int(__stdcall *UNZIPPROC)(LPCWSTR, LPCWSTR);
+//typedef int(*ZIPPROC)(wchar_t*, LPCWSTR);
+//typedef int(*UNZIPPROC)(wchar_t*, LPCWSTR);
 
 int main()
 {
