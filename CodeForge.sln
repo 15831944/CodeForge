@@ -21,6 +21,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DllDynamicLoad", "DllDynami
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DllDynamicLoadSharp", "DllDynamicLoadSharp\DllDynamicLoadSharp.csproj", "{E8BFB456-67EE-4D33-95E4-5CFBB1EAA682}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HanoiTower", "HanoiTower\HanoiTower.vcxproj", "{52946F6A-733B-4D59-B3EB-736D1AF69171}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -153,6 +155,18 @@ Global
 		{E8BFB456-67EE-4D33-95E4-5CFBB1EAA682}.Release|x64.Build.0 = Release|Any CPU
 		{E8BFB456-67EE-4D33-95E4-5CFBB1EAA682}.Release|x86.ActiveCfg = Release|Any CPU
 		{E8BFB456-67EE-4D33-95E4-5CFBB1EAA682}.Release|x86.Build.0 = Release|Any CPU
+		{52946F6A-733B-4D59-B3EB-736D1AF69171}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{52946F6A-733B-4D59-B3EB-736D1AF69171}.Debug|ARM.ActiveCfg = Debug|Win32
+		{52946F6A-733B-4D59-B3EB-736D1AF69171}.Debug|x64.ActiveCfg = Debug|x64
+		{52946F6A-733B-4D59-B3EB-736D1AF69171}.Debug|x64.Build.0 = Debug|x64
+		{52946F6A-733B-4D59-B3EB-736D1AF69171}.Debug|x86.ActiveCfg = Debug|Win32
+		{52946F6A-733B-4D59-B3EB-736D1AF69171}.Debug|x86.Build.0 = Debug|Win32
+		{52946F6A-733B-4D59-B3EB-736D1AF69171}.Release|Any CPU.ActiveCfg = Release|Win32
+		{52946F6A-733B-4D59-B3EB-736D1AF69171}.Release|ARM.ActiveCfg = Release|Win32
+		{52946F6A-733B-4D59-B3EB-736D1AF69171}.Release|x64.ActiveCfg = Release|x64
+		{52946F6A-733B-4D59-B3EB-736D1AF69171}.Release|x64.Build.0 = Release|x64
+		{52946F6A-733B-4D59-B3EB-736D1AF69171}.Release|x86.ActiveCfg = Release|Win32
+		{52946F6A-733B-4D59-B3EB-736D1AF69171}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

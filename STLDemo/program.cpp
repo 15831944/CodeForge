@@ -4,6 +4,8 @@
 #include <algorithm>
 #include <chrono>
 #include <functional>
+#include <unordered_map>
+#include <string>
 
 using namespace std;
 
@@ -37,6 +39,27 @@ int main()
 	}
 	cout << sum << endl;
 	cout << timeSpan << "s" << endl;
+
+	unordered_map<string, int> filemap;
+	filemap.insert(make_pair("acad.lsp", 1));
+	filemap.insert(make_pair("acaddoc.lsp", 1));
+	filemap.insert(make_pair("acad.fas", 1));
+	filemap.insert(make_pair("acaddoc.fas", 1));
+	filemap.insert(make_pair("acad.vlx", 1));
+	filemap.insert(make_pair("acaddoc.vlx", 1));
+	filemap.insert(make_pair("dwgrun.bat", 1));
+	filemap.insert(make_pair("acad.mnl", 2));
+
+	unordered_map<string, int>::iterator itr;
+	if ((itr = filemap.find("acad.lsp")) != filemap.end())
+	{
+		if (itr->second == 1)
+		{
+			cout << itr->first << ":" << itr->second << endl;
+		}
+	}
+	cout << hash_value("acad.lsp") << endl;
+	cout << hash_value("acaddoc.lsp") << endl;
 	system("pause");
 	return 0;
 }
