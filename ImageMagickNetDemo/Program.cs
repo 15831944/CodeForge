@@ -3,7 +3,6 @@ using System.Drawing;
 using System.IO;
 using GhostscriptSharp;
 using iTextSharp.text.pdf;
-using iTextSharp.text.pdf.parser;
 
 namespace ImageMagickNetDemo
 {
@@ -56,13 +55,13 @@ namespace ImageMagickNetDemo
 
         static void Main(string[] args)
         {
-            var pdfFilePath = Environment.CurrentDirectory + @"\IR reader new Schematic.pdf";
-            var imgFilePath = Environment.CurrentDirectory + @"\IR reader new Schematic.jpg";
+            var pdfFilePath = Environment.CurrentDirectory + @"\test.pdf";
+            var imgFilePath = Environment.CurrentDirectory + @"\test.jpg";
 
-            GhostscriptWrapper.GeneratePageThumb(pdfFilePath, imgFilePath, 1, 300, 300);
+            GhostscriptWrapper.GeneratePageThumb(pdfFilePath, imgFilePath, 1, 100, 100);
 
             Bitmap bitmap = new Bitmap(imgFilePath);
-            //Rgb[,] rgbs = bitmap.ToRgbArray();
+            Rgb[,] rgbs = bitmap.ToRgbArray();
             //for (var i = 0; i < rgbs.GetLength(0); ++i)
             //{
             //    for (var j = 0; j < rgbs.GetLength(1); ++j)
@@ -72,12 +71,26 @@ namespace ImageMagickNetDemo
             //}
             Console.WriteLine($@"Height: {bitmap.Height}, Width: {bitmap.Width}");
             Console.WriteLine(bitmap.FindBoundRectangle());
-            AddMarginRectangle(Environment.CurrentDirectory + @"\IR reader new Schematic.pdf", 
-                Environment.CurrentDirectory + @"\IR reader new Schematic mark.pdf",
-                bitmap.FindBoundRectangle(), bitmap.Height, 300);
-            CropPdfWithRectangleAndHeight(Environment.CurrentDirectory + @"\IR reader new Schematic.pdf",
-                Environment.CurrentDirectory + @"\IR reader new Schematic Crop.pdf",
-                bitmap.FindBoundRectangle(), bitmap.Height, 300);
+            //var blank = new Rgb {Red = 255, Green = 255, Blue = 255};
+            //for (var i = 0; i < rgbs.GetLength(1); ++i)
+            //{
+            //    if (rgbs[500, i] != blank)
+            //    {
+            //        Console.WriteLine(i);
+            //        Console.WriteLine(rgbs.GetLength(1));
+            //        break;
+            //    }
+            //    else
+            //    {
+            //        Console.Write(rgbs[500, i]);
+            //    }
+            //} 
+            AddMarginRectangle(Environment.CurrentDirectory + @"\test.pdf",
+                Environment.CurrentDirectory + @"\test mark.pdf",
+                bitmap.FindBoundRectangle(), bitmap.Height, 100);
+            CropPdfWithRectangleAndHeight(Environment.CurrentDirectory + @"\test.pdf",
+                Environment.CurrentDirectory + @"\test crop.pdf",
+                bitmap.FindBoundRectangle(), bitmap.Height, 100);
         }
     }
 }

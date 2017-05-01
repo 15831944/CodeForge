@@ -15,20 +15,27 @@ namespace ImageMagickNetDemo
                 var rect = new Rectangle(0, 0, width, height);
                 var bmpData = bitmap.LockBits(rect, ImageLockMode.ReadWrite, bitmap.PixelFormat);
                 IntPtr iPtr = bmpData.Scan0;
-                var bytesCnt = height*width*3;
-                byte[] pixelValues = new byte[bytesCnt];
-                System.Runtime.InteropServices.Marshal.Copy(iPtr, pixelValues, 0, bytesCnt);
-                bitmap.UnlockBits(bmpData);
-                var pointIdx = 0;
+                //var bytesCnt = height*Math.Abs(bmpData.Stride);
+                //byte[] pixelValues = new byte[bytesCnt];
+                //System.Runtime.InteropServices.Marshal.Copy(iPtr, pixelValues, 0, bytesCnt);
+                //bitmap.UnlockBits(bmpData);
+                //var pointIdx = 0;
                 for (var i = 0; i < height; ++i)
                 {
+                    var pixelValues = new byte[bmpData.Stride];
+                    System.Runtime.InteropServices.Marshal.Copy(iPtr + i*bmpData.Stride, 
+                        pixelValues, 0, bmpData.Stride);
                     for (var j = 0; j < width; ++j)
                     {
-                        rgbMatrix[i, j].Red = pixelValues[pointIdx++];
-                        rgbMatrix[i, j].Green = pixelValues[pointIdx++];
-                        rgbMatrix[i, j].Blue = pixelValues[pointIdx++];
+                        //rgbMatrix[i, j].Blue = pixelValues[pointIdx++];
+                        //rgbMatrix[i, j].Green = pixelValues[pointIdx++];
+                        //rgbMatrix[i, j].Red = pixelValues[pointIdx++];
+                        rgbMatrix[i, j].Blue = pixelValues[j * 3];
+                        rgbMatrix[i, j].Green = pixelValues[j * 3 + 1];
+                        rgbMatrix[i, j].Red = pixelValues[j * 3 + 2];
                     }
                 }
+                bitmap.UnlockBits(bmpData);
                 return rgbMatrix;
             }
             catch
@@ -41,7 +48,7 @@ namespace ImageMagickNetDemo
         {
             var rgbs = bitmap.ToRgbArray();
             int height = rgbs.GetLength(0), width = rgbs.GetLength(1);
-            int xCenter = width >> 1, yCenter = height >> 1;
+            int xCenter = width / 2, yCenter = height / 2;
             int left = 0, right = width - 1, bottom = height - 1, top = 0;
             for (var i = 0; i < xCenter; ++i)
             {
